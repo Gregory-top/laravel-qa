@@ -32,12 +32,7 @@ class User extends Authenticatable
     {
         return $this->hasMany(Question::class);
     }
-
-    public function setTitleAtrribute($value)
-    {
-        $this->attribute['title'] = $value;
-        $this->attribute['slug'] = Str::slug($value);
-    }
+    
 
     /**
      * The attributes that should be cast to native types.
